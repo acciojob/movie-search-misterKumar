@@ -27,6 +27,7 @@ const MovieSearch = () => {
       <input
         type="text"
         placeholder="Search for a movie"
+        className='form'
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />

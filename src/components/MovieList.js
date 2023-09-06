@@ -1,4 +1,5 @@
-import React from "react";
+
+import React from 'react';
 import { useMovieContext } from './MovieContext';
 
 const MovieList = () => {
@@ -10,16 +11,17 @@ const MovieList = () => {
   }
 
   return (
-    <div>
+    <ul className='li'>
       {movies.map((movie) => (
-        <div key={movie.imdbID}>
+        <li key={movie.imdbID}>
           <h2>{movie.Title}</h2>
           <p>Year: {movie.Year}</p>
           <img src={movie.Poster} alt={`${movie.Title} Poster`} />
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 
 export default MovieList;
+
