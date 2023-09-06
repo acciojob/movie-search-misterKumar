@@ -24,14 +24,15 @@ const MovieSearch = () => {
 
   return (
     <div>
-      <input
-        type="text"
-        placeholder="Search for a movie"
-        className='form'
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      <button onClick={searchMovies}>Search</button>
+      <form>
+        <input
+          type="text"
+          placeholder="Search for a movie"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <button type="button" onClick={searchMovies}>Search</button>
+      </form>
     </div>
   );
 };
